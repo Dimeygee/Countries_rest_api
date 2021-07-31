@@ -27,20 +27,13 @@ const CountriesContext = ({children}) => {
 
    useEffect(() => {
         fetch("https://restcountries.eu/rest/v2/all")
-            .then(res => res.json())
+            .then(res =>  res.json())
             .then(data => setCountries(data))
 
         setLocalStorage('theme',theme)
-       const Interval = setTimeout(() => {
-            isLoading(false)
-       },2000)
-
-       return () => {
-           clearInterval(Interval)
-       }
-        
+        isLoading(false)
     
-   } , [theme,loading])
+   } , [theme,isLoading])
 
 
     return(

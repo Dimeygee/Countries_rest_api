@@ -5,7 +5,7 @@ import { Link  } from 'react-router-dom'
 
 const Main = () => {
 
-    const { theme, countries  , loading} = useContext(Country) 
+    const { theme, countries , loading} = useContext(Country) 
     const main = {
         backgroundColor : theme ? 'hsl(207, 26%, 17%)' : ' hsl(0, 0%, 98%)',
         color: theme ? 'white' : 'black' ,
@@ -25,10 +25,7 @@ const Main = () => {
     const [option, selectOptions] = useState('All')
     const [search, searching] = useState('')
 
-    
 
-    
-   
     const Countries = countries.filter(data => {
         if(option === 'All') return data
         return data.region === option
@@ -36,7 +33,8 @@ const Main = () => {
 
     const searched = search === '' ? Countries : Countries.filter(country => country.name.toLowerCase().includes(search))
 
-    const isLoading = loading ? (
+
+    const IsLoading = loading ? (
         <div className='loader' style={main}><i className="fas fa-spinner fa-pulse"></i></div>
     ):
     (
@@ -64,7 +62,7 @@ const Main = () => {
     return(
         <div className='main' style={main}>
             <SrchFill  option={option} selectOptions={selectOptions} searching={searching} theme={theme}/>
-            {isLoading}
+            {IsLoading}
         </div>
     )
 }

@@ -39,7 +39,7 @@ const SrchFill = ({option,selectOptions,searching, theme}) => {
     }
 
     const handleSearch = (e) => {
-        let value = e.target.value
+        let value = e.target.value.toLowerCase()
         searching(value)
     }
 

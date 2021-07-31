@@ -6,17 +6,6 @@
   box-sizing:border-box;
 }
 
-:root {
-  --element :hsl(0, 0%, 100%);
-  --body : hsl(0, 0%, 98%);
-}
-
-body{
-  background-color: var(--body);
-  font-family:'nunito sans';
-}
-
-
 .header{
   padding:20px 80px;
   display:flex;
@@ -122,8 +111,6 @@ body{
   grid-template-columns: repeat(4, 1fr);
   grid-gap:60px;
 }
-
-
 
 .loader{
     position:absolute;
