@@ -26,14 +26,14 @@ const CountryPreview = ({filteredcountry}) => {
         textDecoration:'none',
     }
 
-    /*
+    
 
     const cd = {
         backgroundColor : theme ? 'hsl(207, 26%, 17%)' : ' hsl(0, 0%, 98%)',
         color: theme ? 'white' : 'black' ,
         minHeight : theme ? 'calc(100vh - 74px)' : 'calc(100vh - 75px)',
 
-    }*/
+    }
 
     const icon = {
         color: theme ? 'white' : 'black' ,
@@ -46,7 +46,7 @@ const CountryPreview = ({filteredcountry}) => {
     const countryPreview = filteredcountry.length ? (
         filteredcountry.map(detail => {
             return(
-                <div className='detail_container' key={detail.name}>
+                <div className='detail_container' style={cd} key={detail.name}>
                     <Link to={'/'}><button className='back' style={Rbutton}>
                         <i className='fas fa-arrow-left' style={icon}></i>Back</button></Link>
                     <div  className='content_box'>

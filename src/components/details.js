@@ -13,6 +13,8 @@ const CountryDetail = ({match}) => {
         color: theme ? 'white' : 'black' ,
     }
 
+    
+
     const filteredcountry = countries.filter(country => country.name === name)    
     
     const CountryDetails = filteredcountry.length ? (
