@@ -76,12 +76,14 @@ const CountryPreview = ({filteredcountry}) => {
                             <div className='coutries_border_box'>
                                 <span><strong>Border Countries</strong>: </span>
                                 <span>
-                                    {detail.borders.map(border => {
-                                        const  countryBoder = getCountryBorder(countries,border)
-                                        return (
-                                            <button style={{ border:'none', outline: 'none' }} key={border}><Link to={`/${countryBoder}`} style={cbutton}>{countryBoder}</Link></button>
-                                        )
-                                    })}
+                                    {detail.borders ? (
+                                        detail.borders.map(border => {
+                                            const  countryBoder = getCountryBorder(countries,border)
+                                            return (
+                                                <button style={{ border:'none', outline: 'none' }} key={border}><Link to={`/${countryBoder}`} style={cbutton}>{countryBoder}</Link></button>
+                                            )
+                                        })
+                                    ) : ('')}
                                 </span>
                             </div>
                         </div>

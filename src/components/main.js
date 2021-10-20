@@ -31,8 +31,7 @@ const Main = () => {
         return data.region === option
     })
 
-    const searched = search === '' ? Countries.filter(country => country.alpha2Code !== 'AX') : 
-    Countries.filter(country => country.name.toLowerCase().includes(search))
+    const searched = search === '' ? Countries : Countries.filter(country => country.name.toLowerCase().includes(search))
 
     console.log(searched)
 
